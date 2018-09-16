@@ -2,16 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AppLayoutsComponent } from './src/shared/app-layouts/app-layouts.component';
-import { HeaderComponent } from './src/shared/layout/header/header.component';
-import { NavigationComponent } from './src/shared/layout/navigation/navigation.component';
-import { HomeComponent } from './src/home/home.component';
+import { AppLayoutsComponent } from './modulos/shared/app-layouts/app-layouts.component';
+import { HeaderComponent } from './modulos/shared/layout/header/header.component';
+import { NavigationComponent } from './modulos/shared/layout/navigation/navigation.component';
+import { HomeComponent } from './modulos/home/home.component';
 import { routing } from './app.routing';
-import { GantComponent } from './src/gant/gant.component';
+import { GantComponent } from './modulos/gant/gant.component';
 import * as Sample from 'angular4-gantt';
 import { GanttModule } from './components/gantt/gantt.module';
 import { TableComponent } from './components/table/table.component';
-import { CalendarioComponent } from './components/calendario/calendario.component';
+import { GanttDhtmlxModule } from './components/gantt-dhtmlx/gantt-dhtmlx.module';
+import { CalendarioDhtmlxModule } from './components/calendario-dhtmlx/calendario-dhtmlx.module';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +24,13 @@ import { CalendarioComponent } from './components/calendario/calendario.componen
     HomeComponent,
     GantComponent,
     TableComponent,
-    CalendarioComponent
   ],
   imports: [
     BrowserModule,
     routing,
-    GanttModule
+    GanttModule,
+    GanttDhtmlxModule,
+    CalendarioDhtmlxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

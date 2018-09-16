@@ -1,10 +1,10 @@
 import {Routes, RouterModule} from '@angular/router';
 import {ModuleWithProviders} from "@angular/core";
 import { AppComponent } from './app.component';
-import { HomeComponent } from './src/home/home.component';
-import { GantComponent } from './src/gant/gant.component';
+import { HomeComponent } from './modulos/home/home.component';
+import { GantComponent } from './modulos/gant/gant.component';
 import { TableComponent } from './components/table/table.component';
-import { CalendarioComponent } from './components/calendario/calendario.component';
+import { GanttDhtmlxComponent } from './components/gantt-dhtmlx/gantt-dhtmlx/gantt-dhtmlx.component';
 
 
 export const routes: Routes = [
@@ -28,11 +28,6 @@ export const routes: Routes = [
         path: 'table',
         data: {pageTitle: 'Tabla'},
         component: TableComponent,
-    },
-    {
-        path: 'calendario',
-        data: {pageTitle: 'Calendario'},
-        component: CalendarioComponent,
     }
 ];
 
